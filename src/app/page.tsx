@@ -2,6 +2,8 @@ import NextBgImage from "next-bg-image";
 import BGImage from "./bg.jpg";
 import CountdownTimer from "@/components/timer";
 import dayjs from "dayjs";
+import Confetti from "@/components/confetti";
+import Link from "next/link";
 
 const WEDDING_DATE = "2024-03-06T00:00:00+05:30";
 const COUPLE_NAME = "Teja & Vishnu Priya";
@@ -11,6 +13,7 @@ export default function Home() {
   return (
     <main>
       <NextBgImage src={BGImage} className="flex min-h-screen">
+        <Confetti />
         <div className="flex min-h-screen w-full mt-40 flex-col items-center animate-fade-in ">
           <p className="text-2xl text-orange-500 text-center">
             We Are getting married{" "}
@@ -28,6 +31,17 @@ export default function Home() {
             <time dateTime={WEDDING_DATE} className="text-3xl font-bold">
               <CountdownTimer targetDate={countdownDate} />
             </time>
+          </div>
+          {/* 
+            Venue:
+          */}
+          <div className="flex flex-col items-center mt-12 text-center">
+            <Link href="https://maps.app.goo.gl/UjYCMPjxSfMsRYEf8">
+              <p className="text-base font-bold mt-12">Venue:</p>
+              <span className="text-3xl text-orange-600 text-decoration-line hover:text-orange-500 hover:cursor-pointer">
+                J S K Gardens
+              </span>
+            </Link>
           </div>
         </div>
       </NextBgImage>
