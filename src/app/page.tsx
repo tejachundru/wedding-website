@@ -4,9 +4,14 @@ import dayjs from "dayjs";
 import Confetti from "@/components/confetti";
 import Link from "next/link";
 import NextBgImage from "@/components/nextbg";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 const WEDDING_DATE = "2024-03-06T00:00:00+05:30";
 const COUPLE_NAME = "Teja & VishnuPriya";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export default function Home() {
   const countdownDate = new Date(WEDDING_DATE).getTime();
@@ -20,7 +25,9 @@ export default function Home() {
             {COUPLE_NAME}
           </h1>
           <time dateTime={WEDDING_DATE} className="text-3xl font-bold mt-12">
-            {dayjs(WEDDING_DATE).format("dddd, MMMM D, YYYY")}
+            {dayjs(WEDDING_DATE)
+              .tz("Asia/Kolkata")
+              .format("dddd, MMMM D, YYYY")}
           </time>
           <div className="flex flex-col items-center mt-12">
             <time dateTime={WEDDING_DATE} className="text-3xl font-bold">
