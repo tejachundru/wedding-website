@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Parisienne } from "next/font/google";
+import { Great_Vibes } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
-const inter = Parisienne({
+const inter = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
 });
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <Analytics />
     </html>
   );
 }
