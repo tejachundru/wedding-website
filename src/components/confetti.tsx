@@ -15,7 +15,7 @@ const canvasStyles: CSSProperties = {
 function Confetti() {
   return (
     <>
-      <Snow autorun={{ speed: 9 }} />
+      <Snow autorun={{ speed: 20 }} />
     </>
   );
 }

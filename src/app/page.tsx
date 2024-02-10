@@ -6,6 +6,7 @@ import Link from "next/link";
 import NextBgImage from "@/components/nextbg";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import AddSound from "@/components/sound";
 
 const WEDDING_DATE = "2024-03-06T00:00:00+05:30";
 const COUPLE_NAME = "Teja & VishnuPriya";
@@ -34,6 +35,7 @@ export default function Home() {
               <CountdownTimer targetDate={countdownDate} />
             </time>
           </div>
+          <AddSound />
           {/* 
             Venue:
           */}
