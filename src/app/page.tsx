@@ -1,9 +1,10 @@
-import BGImage from "./bg.jpg";
+import BGImage from "./bg.jpeg";
 import CountdownTimer from "@/components/timer";
 import dayjs from "dayjs";
 import Confetti from "@/components/confetti";
 import Link from "next/link";
 import NextBgImage from "@/components/nextbg";
+
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import AddSound from "@/components/sound";
@@ -18,9 +19,15 @@ export default function Home() {
   const countdownDate = new Date(WEDDING_DATE).getTime();
   return (
     <main>
-      <NextBgImage src={BGImage} className="flex min-h-screen">
+      <NextBgImage
+        src={BGImage}
+        className="flex min-h-screen fill"
+        size={{
+          base: "cover",
+        }}
+      >
         <Confetti />
-        <div className="flex min-h-screen w-full mt-40 flex-col items-center animate-fade-in text-white">
+        <div className="flex min-h-screen w-full mt-40 flex-col items-center animate-fade-in">
           <p className="text-2xl  text-center">We Are getting married </p>
           <h1 className="text-6xl text-center font-bold mt-4  hover:text-7xl  hover:animate-pulse hover:cursor-pointer transition duration-800">
             {COUPLE_NAME}
