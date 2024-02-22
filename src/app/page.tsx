@@ -97,7 +97,7 @@ export default function Home() {
           height={200}
           width={200}
         />
-        <div className="flex flex-col items-center mt-12 text-center gap-4">
+        <div className="flex flex-col items-center mt-4 text-center gap-4">
           <Button
             onClick={(e) => {
               e.preventDefault();
