@@ -3,7 +3,7 @@ import { Great_Vibes, Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-export const inter = Great_Vibes({
+const inter = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-inter",
