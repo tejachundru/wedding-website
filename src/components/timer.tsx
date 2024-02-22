@@ -14,7 +14,7 @@ const DateTimeDisplay = ({
   return (
     <div className={isDanger ? "countdown danger" : "countdown"}>
       <div className="value text-base flex row items-end mr-2">
-        <p className="text-2xl font-bold mr-1 hover:text-4xl animate-pulse hover:cursor-pointer transition duration-800">
+        <p className="text-xl font-bold mr-1 hover:text-4xl animate-pulse hover:cursor-pointer transition duration-800">
           {value}
         </p>{" "}
         {type === "Days" ? "Days" : type}
