@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Great_Vibes, Poppins } from "next/font/google";
+import { Great_Vibes, Tangerine } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -9,7 +9,7 @@ const inter = Great_Vibes({
   variable: "--font-inter",
 });
 
-const lato = Poppins({
+const lato = Tangerine({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-lato",
