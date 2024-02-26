@@ -51,8 +51,9 @@ export default function Home() {
           We Are getting married{" "}
         </p>
         <h1 className="text-7xl mt-10 text-center font-bold  hover:animate-pulse hover:cursor-pointer transition duration-800 font-inter max-w-sm text-red-800 leading-8">
-          {process.env.NAME_ONE} <br /> <br /> <p className="text-5xl">&</p>{" "}
-          <br /> {process.env.NAME_TWO}
+          {process.env.NEXT_PUBLIC_NAME_ONE} <br /> <br />{" "}
+          <p className="text-5xl">&</p> <br />{" "}
+          {process.env.NEXT_PUBLIC_NAME_TWO}
         </h1>
         <div className="flex flex-col items-center text-cyan-900	">
           <p className="text-xl mt-10 font-bold font-pop text-center max-w-md p-3 ">
