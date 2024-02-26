@@ -6,6 +6,10 @@
   font-family: var(--font-inter);
 }
 
+.font-pop {
+  font-family: var(--font-poppins);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
