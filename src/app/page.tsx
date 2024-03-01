@@ -10,6 +10,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import AddSound from "@/components/sound";
 
 const WEDDING_DATE = "2024-03-06T00:00:00+05:30";
 
@@ -96,7 +97,7 @@ export default function Home() {
           </time>
         </div>
 
-        {/* <AddSound /> */}
+        <AddSound />
         {/* 
             Venue:  
           */}
