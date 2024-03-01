@@ -138,6 +138,53 @@ export default function Home() {
             height={120}
           />
         </div>
+        {process.env.NEXT_PUBLIC_NAME_ONE === "Teja" && (
+          <>
+            <Image
+              src={"/couple2.png"}
+              alt="couple"
+              width={200}
+              height={200}
+              className="animate-pulse hover:cursor-pointer transition duration-800 hover:scale-110 mt-12"
+            />
+            <time
+              dateTime={WEDDING_DATE}
+              className="text-5xl font-bold mt-12  text-red-500"
+            >
+              {dayjs(WEDDING_DATE)
+                .add(1, "day")
+                .tz("Asia/Kolkata")
+                .format("dddd - DD  MMM  YYYY ")}
+            </time>
+            <time className="text-4xl mt-2 font-bold  text-red-500">
+              from{" "}
+              {dayjs(WEDDING_DATE)
+                .add(10, "hours")
+                .tz("Asia/Kolkata")
+                .format("hh:mm a")}{" "}
+            </time>
+            <div className="flex flex-col items-center mt-8 text-center mb-10">
+              <p className="text-xl mt-8 text-decoration-line hover:cursor-pointer font-inter">
+                Reception Venue:
+              </p>
+              <span className="text-4xl mt-2 font-bold text-decoration-line hover:cursor-pointer text-red-600">
+                Gita mandiram <br />
+                Velpuru, Tanuku
+              </span>
+            </div>
+            <div className="flex flex-col items-center mt-4 text-center gap-4">
+              <Button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://maps.app.goo.gl/W8pE3DfhpjuYVXCN7");
+                }}
+                className="text-xl font-pop"
+              >
+                {"Click me for Directions ⤴"}
+              </Button>
+            </div>
+          </>
+        )}
       </div>
     </NextBgImage>
   );
